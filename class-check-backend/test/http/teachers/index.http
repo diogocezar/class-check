@@ -1,0 +1,14 @@
+@base = http://localhost:3333
+
+### Create One
+
+POST {{base}}/teachers HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Diogo Cezar Teixeira Batista",
+}
+
+### Get All
+GET {{base}}/teachers HTTP/1.1
+content-type: application/json

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1633380813973" clover="3.2.0">
+  <project timestamp="1633380813973" name="All files">
+    <metrics statements="24" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="3" elements="36" coveredelements="17" complexity="0" loc="24" ncloc="24" packages="2" files="3" classes="3"/>
+    <package name="shared">
+      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="prisma.service.ts" path="/Users/diogo/www/github/class-check/class-check-backend/src/shared/prisma.service.ts">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="teachers">
+      <metrics statements="18" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="3"/>
+      <file name="teachers.controller.ts" path="/Users/diogo/www/github/class-check/class-check-backend/src/teachers/teachers.controller.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="teachers.service.ts" path="/Users/diogo/www/github/class-check/class-check-backend/src/teachers/teachers.service.ts">
+        <metrics statements="10" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

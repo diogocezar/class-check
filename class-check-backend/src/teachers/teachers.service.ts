@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from './prisma.service';
+import { PrismaService } from '../shared/prisma.service';
 import { Teacher, Prisma } from '@prisma/client';
 
 @Injectable()
-export class TeacherService {
+export class TeachersService {
   constructor(private prisma: PrismaService) {}
 
-  async teacher(
+  async getOne(
     teacherWhereUniqueInput: Prisma.TeacherWhereUniqueInput,
   ): Promise<Teacher | null> {
     return this.prisma.teacher.findUnique({
@@ -31,17 +31,17 @@ export class TeacherService {
   //   });
   // }
 
-  async teachers(): Promise<Teacher[]> {
+  async getAll(): Promise<Teacher[]> {
     return this.prisma.teacher.findMany();
   }
 
-  async createTeacher(data: Prisma.TeacherCreateInput): Promise<Teacher> {
+  async create(data: Prisma.TeacherCreateInput): Promise<Teacher> {
     return this.prisma.teacher.create({
       data,
     });
   }
 
-  async updateTeacher(params: {
+  async update(params: {
     where: Prisma.TeacherWhereUniqueInput;
     data: Prisma.TeacherUpdateInput;
   }): Promise<Teacher> {
@@ -52,7 +52,7 @@ export class TeacherService {
     });
   }
 
-  async deleteTeacher(where: Prisma.TeacherWhereUniqueInput): Promise<Teacher> {
+  async delete(where: Prisma.TeacherWhereUniqueInput): Promise<Teacher> {
     return this.prisma.teacher.delete({
       where,
     });
