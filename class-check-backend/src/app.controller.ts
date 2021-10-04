@@ -1,12 +1,20 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Get, Post, Body } from '@nestjs/common';
+import { TeacherService } from './teacher.service';
+import { Teacher as TeacherModel } from '@prisma/client';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private teacherService: TeacherService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Post('teacher')
+  async createTeacher(
+    @Body() teacherData: { name: string },
+  ): Promise<TeacherModel> {
+    return this.teacherService.createTeacher(teacherData);
+  }
+
+  @Get('teacher')
+  async getAllTeachers(): Promise<TeacherModel[]> {
+    return this.teacherService.teachers();
   }
 }

@@ -19,9 +19,7 @@ import {
 import { Sidebar } from "../../components/Sidebar";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import { withSSRAuth } from "../../utils/withSSRAuth";
 import { Pagination } from "../../components/Pagination";
-import { useMessages } from "../../services/hooks/useMessages";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
@@ -135,11 +133,11 @@ export default function Messages() {
                 <Th>Cadastrado em</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            {/* <Tbody>
               {data?.messages.map((message) => (
                 <MessageItem message={message} />
               ))}
-            </Tbody>
+            </Tbody> */}
           </Table>
 
           <Pagination
@@ -153,9 +151,3 @@ export default function Messages() {
     </Box>
   );
 }
-
-export const getServerSideProps = withSSRAuth(async (ctx) => {
-  return {
-    props: {},
-  };
-});
