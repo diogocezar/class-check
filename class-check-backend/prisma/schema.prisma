@@ -11,6 +11,37 @@ generator client {
 }
 
 model Teacher {
-  id   Int    @id @default(autoincrement())
-  name String
+  id      Int     @id @default(autoincrement())
+  name    String
+  classes Class[]
+  Check   Check[]
+}
+
+model Class {
+  id        Int      @id @default(autoincrement())
+  name      String
+  Teacher   Teacher? @relation(fields: [teacherId], references: [id])
+  teacherId Int?
+  Check     Check[]
+}
+
+model Grid {
+  id    Int      @id @default(autoincrement())
+  name  String
+  start DateTime
+  end   DateTime
+  Check Check[]
+}
+
+model Check {
+  id          Int      @id @default(autoincrement())
+  grid        Grid     @relation(fields: [gridId], references: [id])
+  teacher     Teacher  @relation(fields: [teacherId], references: [id])
+  class       Class    @relation(fields: [classId], references: [id])
+  date        DateTime
+  description String
+  isFinished  Boolean
+  gridId      Int
+  teacherId   Int
+  classId     Int
 }
